@@ -25,9 +25,19 @@ export function jsonToFlow(json) {
 
   function lastKey(p) {
     if (!p) return null;
-    const m = p.match(/([^.\[\]]+)(?=\]?$)/g);
-    if (!m) return p;
-    return m[m.length - 1];
+    // Return a readable last key/token of a path like
+    // $.user.address.city -> city
+    // $.items[0].name -> name
+    // $.items[0] -> [0]
+    const lastDot = p.lastIndexOf('.');
+    const lastBracket = p.lastIndexOf('[');
+    if (lastBracket > lastDot) {
+      // path ends with an array index like ...[3]
+      const close = p.indexOf(']', lastBracket);
+      if (close > lastBracket) return p.substring(lastBracket, close + 1);
+    }
+    if (lastDot === -1) return p;
+    return p.substring(lastDot + 1);
   }
 
   function visit(value, path, depth, parentId) {
