@@ -1,33 +1,79 @@
 # JSON Tree Visualizer
 
-An interactive JSON Tree Visualizer built with React and React Flow.
+An interactive JSON Tree Visualizer built with React and React Flow. Try it live at [https://utti-dev.github.io/json-tree-vis/](https://utti-dev.github.io/json-tree-vis/)
 
-Features
+## Features
 - Paste JSON in the left panel and click "Generate Tree" to visualize.
-- Tree visualization using React Flow (objects, arrays, primitives shown as different colors).
-- Search by JSON path (e.g. `$.user.address.city` or `items[0].name`) — matching node is highlighted and centered.
-- Click a node to copy its JSON path to the clipboard.
-- Basic zoom controls (Fit / Zoom In / Zoom Out).
+- Tree visualization using React Flow:
+  - Objects (purple), arrays (green), and primitives (yellow) with distinct colors
+  - Automatic layout with parent-child connections
+  - Interactive pan and zoom
+- Search by JSON path:
+  - Use paths like `$.user.address.city` or `items[0].name`
+  - Matching node is highlighted and centered
+  - Shows "Match found" or "No match found" status
+- Click any node to copy its JSON path to clipboard
+- Controls:
+  - Generate Tree / Clear buttons
+  - Fit View / Zoom controls
+  - Pan by dragging the canvas
 
-Local development
+## Development
 
-1. Install dependencies:
-```powershell
+1. Clone and install dependencies:
+```bash
+git clone https://github.com/utti-dev/json-tree-vis.git
+cd json-tree-vis
 npm install
 ```
 
 2. Start the dev server:
-```powershell
+```bash
 npm start
 ```
+Visit http://localhost:3000 in your browser.
 
-Build and deploy
-- This project was created with Create React App and can be deployed to GitHub Pages, Netlify, or Vercel.
+## Deployment
 
-Notes
-- The project uses `reactflow` for visualization. If you don't want to modify `package.json`, run `npm install reactflow` manually.
+### GitHub Pages (current deployment)
+The site is deployed at [https://utti-dev.github.io/json-tree-vis/](https://utti-dev.github.io/json-tree-vis/)
 
-Next steps (optional): dark mode toggle, image export, improved tree layout for very large JSON files.
+To deploy your own fork:
+1. Update `homepage` in `package.json` to your GitHub Pages URL
+2. Run the deploy command:
+```bash
+npm run deploy
+```
+This builds the app and pushes to the `gh-pages` branch.
+
+### Alternative Deployment Options
+
+#### Netlify
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/utti-dev/json-tree-vis)
+1. Click the Deploy to Netlify button or connect your repo manually
+2. Remove `homepage` from `package.json`
+3. Netlify will auto-deploy on every push to main
+
+#### Vercel
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/utti-dev/json-tree-vis)
+1. Click Deploy or import your repo in Vercel dashboard
+2. Remove `homepage` from `package.json`
+3. Vercel will auto-deploy on every push to main
+
+## Tech Stack
+- React (Create React App)
+- [React Flow](https://reactflow.dev/) for visualization
+- GitHub Actions + GitHub Pages for CI/CD
+
+## Contributing
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+## License
+MIT
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
