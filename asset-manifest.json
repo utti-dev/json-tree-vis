@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/json-tree-vis/static/css/main.bfbffbf2.css",
+    "main.js": "/json-tree-vis/static/js/main.b4106baf.js",
+    "static/js/453.8622c7ad.chunk.js": "/json-tree-vis/static/js/453.8622c7ad.chunk.js",
+    "index.html": "/json-tree-vis/index.html",
+    "main.bfbffbf2.css.map": "/json-tree-vis/static/css/main.bfbffbf2.css.map",
+    "main.b4106baf.js.map": "/json-tree-vis/static/js/main.b4106baf.js.map",
+    "453.8622c7ad.chunk.js.map": "/json-tree-vis/static/js/453.8622c7ad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bfbffbf2.css",
+    "static/js/main.b4106baf.js"
+  ]
+}
