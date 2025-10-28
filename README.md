@@ -1,3 +1,33 @@
+# JSON Tree Visualizer
+
+An interactive JSON Tree Visualizer built with React and React Flow.
+
+Features
+- Paste JSON in the left panel and click "Generate Tree" to visualize.
+- Tree visualization using React Flow (objects, arrays, primitives shown as different colors).
+- Search by JSON path (e.g. `$.user.address.city` or `items[0].name`) — matching node is highlighted and centered.
+- Click a node to copy its JSON path to the clipboard.
+- Basic zoom controls (Fit / Zoom In / Zoom Out).
+
+Local development
+
+1. Install dependencies:
+```powershell
+npm install
+```
+
+2. Start the dev server:
+```powershell
+npm start
+```
+
+Build and deploy
+- This project was created with Create React App and can be deployed to GitHub Pages, Netlify, or Vercel.
+
+Notes
+- The project uses `reactflow` for visualization. If you don't want to modify `package.json`, run `npm install reactflow` manually.
+
+Next steps (optional): dark mode toggle, image export, improved tree layout for very large JSON files.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

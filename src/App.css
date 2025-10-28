@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+.app-root {
+  display: flex;
+  height: 100vh;
+  gap: 8px;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.panel {
+  width: 380px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  background: #ffffff;
+  overflow: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.panel h2 {
+  margin: 4px 0 8px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.json-input {
+  width: 100%;
+  height: 320px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace;
+  font-size: 13px;
+  margin-bottom: 8px;
+  border: 1px solid #e6e9ef;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.controls button {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #dfe6f0;
+  background: #f5f7fb;
+  cursor: pointer;
+}
+
+.controls button:hover { background:#eef3ff }
+
+.search {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #e6e9ef;
+}
+
+.visualizer {
+  flex: 1;
+  background: #f6f7fb;
+  padding: 8px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.flow-wrap { height: 100%; position: relative; }
+.flow-toolbar { position: absolute; z-index: 4; left: 10px; top: 8px; display:flex; gap:6px; align-items:center }
+.flow-toolbar button { padding:6px 8px; border-radius:6px; border:1px solid #ddd; background:#fff; cursor:pointer }
+.flow-message { margin-left:8px; font-size:13px; color:#333 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reactflow-wrapper { height: 100%; border-radius:8px; background: white; padding:8px }
+
+.error { color: #b00020; margin-top: 8px; }
+
+/* small responsive */
+@media (max-width: 900px) {
+  .app-root { flex-direction: column }
+  .panel { width: 100%; }
 }
