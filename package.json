@@ -2,6 +2,7 @@
   "name": "json-tree-vis",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://utti-dev.github.io/json-tree-vis",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
